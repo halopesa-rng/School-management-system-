@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Green Star Admin</title>
+<link rel="stylesheet" href="/css/app.css">
+</head>
+<body>
+<header class="topbar"><div><div class="brand">GREEN STAR</div><div class="subtitle">Administration</div></div></header>
+<main class="container">
+<section id="adminLogin" class="card">
+<h2>Admin Login</h2>
+<form id="loginForm">
+<input id="username" placeholder="Username" required>
+<input id="password" type="password" placeholder="Password" required>
+<button>Sign in</button>
+</form>
+<p class="muted">Initial seed: admin / ChangeMe123!</p>
+</section>
+
+<section id="adminPanel" class="hidden">
+<div class="card">
+<h2>Dashboard</h2>
+<div id="stats" class="stats"></div>
+</div>
+<div class="card">
+<h3>Add Student</h3>
+<form id="studentForm" class="formgrid">
+<input name="admission_no" placeholder="Admission No." required>
+<input name="full_name" placeholder="Full name" required>
+<input name="gender" placeholder="Gender">
+<input name="date_of_birth" type="date">
+<input name="class_name" placeholder="Class / Grade" required>
+<input name="stream" placeholder="Stream">
+<input name="telegram_id" placeholder="Parent Telegram ID">
+<input name="guardian_name" placeholder="Parent name">
+<input name="guardian_phone" placeholder="Parent phone">
+<button>Add Student</button>
+</form>
+</div>
+<div class="card">
+<h3>Publish Announcement</h3>
+<form id="announcementForm">
+<input name="title" placeholder="Title" required>
+<textarea name="body" placeholder="Announcement" required></textarea>
+<button>Publish</button>
+</form>
+</div>
+<div class="card">
+<h3>Students</h3>
+<div id="adminStudents"></div>
+</div>
+</section>
+</main>
+<script src="/js/admin.js"></script>
+</body>
+</html>
